@@ -1,0 +1,144 @@
+$light-purple: #ff71fa;
+$so-light-purple: #eedaed;
+$dark: #313030;
+$purple: #b609b0;
+$light-grey: #f9f9f9;
+$hover-grey: #edeaea;
+
+
+
+nav {
+  display: flex;
+  align-items: baseline;
+  width: 90vw;
+  position: sticky;
+  margin: 10px 5%;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  a {
+    display: block;
+    text-decoration: none;
+    outline: none;
+    transition: 0.4s ease-in-out;
+    color: $dark;
+    &:hover {
+     color: $purple;
+    }
+  }
+  button {
+    font-size: 20px;
+    transition-duration: 0.4s;
+    background-color: white;
+    color: $purple;
+    border: 2px solid $purple;
+
+    &:hover {
+      box-shadow: 0 0 6px $purple;
+    }
+    &:active {
+      filter: saturate(150%);
+      color: $light-purple;
+      border: $light-purple;
+      border: 2px solid $purple;
+      // transition: color 0s;
+    }
+    &:focus {
+      color: $light-purple;
+      border: $light-purple;
+    }
+  }
+}
+.nav-li {
+  padding: 0px 5% 6px;
+  float: left;
+  border-right: 0.5px solid $purple;
+
+  &:hover {
+    // border-bottom: 2px solid $purple;
+    padding: 0px 5% 4px;
+  }
+}
+
+.navigation {
+  max-width: 650px;
+  display: flex;
+  justify-content: space-around;
+  width: 60vw;
+  font-size: 17px;
+  font-weight: bold;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: $light-grey;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content {
+  a {
+    color: $dark;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+}
+
+.dropdown-content {
+  a {
+    &:hover {
+      background-color: $hover-grey;
+    }
+  }
+}
+
+.dropdown:hover {
+  .dropdown-content {
+    display: block;
+  }
+}
+
+.logo {
+  font-size: 40px;
+  color: $purple;
+  cursor: pointer;
+
+  &:hover {
+    transition: 1s;
+    transform: rotate(360deg);
+  }
+}
+.sign-wrap {
+  display: flex;
+  flex-grow: 1;
+  justify-content: flex-end;
+  button {
+    text-decoration: none;
+    margin: auto 2%;
+    padding: 10px 10px;
+    text-align: center;
+    border-radius: 8px;
+  }
+}
+h1 {
+  text-align: center;
+  color: $dark;
+  transition: 0.4s;
+  &:hover {
+    transform: scale(1.1);
+    transition: 0.4s;
+  }
+  // position: relative;
+  padding: 0 20px;
+}
