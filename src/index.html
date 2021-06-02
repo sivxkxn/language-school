@@ -10,7 +10,7 @@
     <meta name="author" content="Julia Sivokon">
     <!-- <link rel="stylesheet" href="../fontawesome/css/all.css"> -->
     <link rel="stylesheet" href="./css/app.css">
-    <link rel="stylesheet" href="./css/mainPage.css">
+    <!-- <link rel="stylesheet" href="./css/mainPage.css"> -->
 
     <title>Language school</title>
 </head>
@@ -19,43 +19,50 @@
     <header>
         <nav>
             <span class="logo"><a href="#home"></a>LS</a></span>
-            <div class="nav-wrap">
-                <ul class="navigation">
-                    <li class="nav-li"><a href="#description">О школе</a></li>
-                    <li class="dropdown nav-li"><a href="#description">Занятия </a>
-                        <ul class="dropdown-content">
-                            <li><a class="dropdown-item" href="#">Групповые</a></li>
-                            <li><a class="dropdown-item" href="#">Индивидуальные </a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-li"><a href="#description">Наши учителя</a></li>
-                    <li class="nav-li"><a href="#description">Контакты</a></li>
+            <ul class="navigation">
+                <li class="nav-li"><a href="#about">О школе</a></li>
+                <li class="dropdown nav-li"><a href="#description">Занятия </a>
+                    <ul class="dropdown-content">
+                        <li><a class="dropdown-item" href="#">Групповые</a></li>
+                        <li><a class="dropdown-item" href="#">Индивидуальные </a></li>
+                    </ul>
+                </li>
+                <li class="nav-li"><a href="#description">Наши учителя</a></li>
+                <li class="nav-li"><a href="#description">Контакты</a></li>
 
-                </ul>
-            </div>
+            </ul>
             <span class="sign-wrap">
                 <button type="button" class="sign-in">Sign in</button>
                 <button type="button" class="sign-in">Sign up</button>
             </span>
         </nav>
-
         <h1>Language school</h1>
+    </header>
+
+    <main>
 
         <section class=".section-video ">
             <div class="video-wrap">
-                <!-- <iframe> -->
-                    <video preload="auto" autoplay="true" loop="true" muted="muted" > 
-                        <source src="video/school.mp4" type='video/mp4;'>
-                    </video>
-                <!-- </iframe> -->
+
+                <video preload="auto" autoplay="true" loop="true" muted="muted">
+                    <source src="video/school.mp4" type='video/mp4;'>
+                </video>
+
             </div>
         </section>
-    </header>
-    <main>
+
+        <section class="gallery">
+            <h2 id="about">О школе</h2>
+            <article>
+
+            </article>
+        </section>
     </main>
     <footer>
-        <script type="text/javascript" src="../build/app.js"></script>
+
     </footer>
+
+    <script type="text/javascript" src="../build/app.js"></script>
 </body>
 
 </html>
