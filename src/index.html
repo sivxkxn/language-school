@@ -10,25 +10,27 @@
     <meta name="author" content="Julia Sivokon">
     <!-- <link rel="stylesheet" href="../fontawesome/css/all.css"> -->
     <link rel="stylesheet" href="./css/app.css">
-    <!-- <link rel="stylesheet" href="./css/mainPage.css"> -->
+    <link rel="stylesheet" href="./css/mainPage.css">
 
     <title>Language school</title>
 </head>
 
 <body>
     <header>
+        <h1>Language school</h1>
         <nav>
-            <span class="logo"><a href="#home"></a>LS</a></span>
+
             <ul class="navigation">
+                <span class="logo"><a href="#home"></a>LS</a></span>
                 <li class="nav-li"><a href="#about">О школе</a></li>
-                <li class="dropdown nav-li"><a href="#description">Занятия </a>
+                <li class="nav-li"><a href="#office">Офис</a></li>
+                <li class="dropdown nav-li"><a href="#group">Занятия </a>
                     <ul class="dropdown-content">
-                        <li><a class="dropdown-item" href="#">Групповые</a></li>
-                        <li><a class="dropdown-item" href="#">Индивидуальные </a></li>
+                        <li><a class="dropdown-item" href="#group">Групповые</a></li>
+                        <li><a class="dropdown-item" href="#private">Индивидуальные </a></li>
                     </ul>
                 </li>
-                <li class="nav-li"><a href="#description">Наши учителя</a></li>
-                <li class="nav-li"><a href="#description">Контакты</a></li>
+                <li class="nav-li"><a href="#contacts">Контакты</a></li>
 
             </ul>
             <span class="sign-wrap">
@@ -36,7 +38,7 @@
                 <button type="button" class="sign-in">Sign up</button>
             </span>
         </nav>
-        <h1>Language school</h1>
+
     </header>
 
     <main>
@@ -51,14 +53,48 @@
             </div>
         </section>
 
-        <section class="gallery">
+        <section class="gallery-wrap">
             <h2 id="about">О школе</h2>
-            <article>
-
+            <article class="description">
+                <span>Живое общение &#128069;</span>
+                <p>Курсы по английскому языку дают «живое общение». Здесь полностью исключены скука и пассивность.
+                    Независимо от того, какой тип занятий вы выберите (групповые или индивидуальные), преподаватели
+                    сделают все возможное для того, чтобы вы могли максимально проявить себя и усовершенствовать свои
+                    знания.</p>
+                <span>Понимание речи &#128524;</span>
+                <p>Максимально доступная подача материала. Мало просто пройти общий курс — важно научиться понимать, о
+                    чем идет речь.</p>
+                <span>Крутые материалы 	&#128214;</span>
+                <p>Разнообразие обучающего материала, который постоянно обновляется. И ты всегда сможешь оставаться на гребне иформационной волны. </p>
+                <span>Скорость обучения &#128640;</span>
+                <p>Квалифицированные специалисты помогут очень быстро и на должном уровне освоить все необходимые
+                    разговорные и грамматические аспекты.</p>
             </article>
         </section>
+        <section id="office">
+            <h3 class="gallery-header">Наш офис</h3>
+            <div class="gallery">
+                <div class="gallery-item"> <img src="images/office5.jpeg" class="gallery-image"></img></div>
+                <div class="gallery-item"> <img src="images/office6.jpeg" class="gallery-image"></img></div>
+                <div class="gallery-item"> <img src="images/office5.jpeg" class="gallery-image"></img></div>
+                <div class="gallery-item"> <img src="images/office6.jpeg" class="gallery-image"></img></div>
+                <div class="gallery-item"> <img src="images/office5.jpeg" class="gallery-image"></img></div>
+                <div class="gallery-item"> <img src="images/office6.jpeg" class="gallery-image"></img></div>
+                <div class="gallery-item"> <img src="images/office5.jpeg" class="gallery-image"></img></div>
+                <div class="gallery-item"> <img src="images/office6.jpeg" class="gallery-image"></img></div>
+            </div>
+        </section>
+        <section  id="group">
+            <img src="images/Group_top.svg">
+            <div class="group-container">
+
+            </div>
+        </section>
+        <section  id="private">
+            <img src="images/Private_top.svg">
+        </section>
     </main>
-    <footer>
+    <footer id="contacts">
 
     </footer>
 
