@@ -3,11 +3,72 @@ $so-light-purple: #eedaed;
 $dark: #313030;
 $purple: #b20072;
 $light-grey: #f9f9f9;
-$hover-grey: #edeaea;
+$hover-grey: #ddd;
+$yellow: #fdb100;
+$red: #e0004b;
 $white: rgb(255, 255, 255);
-#group{
+#group {
     margin: 5% 10%;
 }
-.group-container{
-   background-color: $light-grey;
+.container {
+    display: flex;
+    justify-content: center;
+}
+.group-pagination {
+    margin: 5% 10%;
+    display: flex;
+    justify-content: center;
+    a {
+        font-size: 16px;
+        color: black;
+
+        padding: 8px 16px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+        &:hover {
+            background-color: $hover-grey;
+        }
+    }
+    a.active {
+        background-color: $purple;
+        color: white;
+    }
+}
+.group-header {
+    text-align: center;
+    color: $dark;
+    font-size: 25px;
+}
+.group-item {
+    li {
+        list-style-type: none;
+    }
+}
+.lesson-box {
+    font-size: 17px;
+
+    width: 40%;
+    margin: 1%;
+    padding: 2%;
+    border: 3px solid $yellow;
+    border-radius: 5%;
+}
+.submit-course {
+    font-size: 16px;
+    transition-duration: 0.4s;
+    background-color: $purple;
+    color: $white;
+    padding: 2%;
+    border: 0;
+    margin: auto 30%;
+    &:hover {
+        box-shadow: 0 0 6px $purple;
+    }
+}
+.count{
+color: $red;
+font-weight: bold;
+}
+.lesson-box{
+    margin:2% auto;
 }
