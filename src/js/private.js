@@ -1,4 +1,4 @@
-const { mySearch } = require('./funcs');
+// const { mySearch } = require('./funcs');
 // const { values } = require('./teachers');
 const teachers = require('./teachers');
 let wrap = document.getElementById('private-wrap');

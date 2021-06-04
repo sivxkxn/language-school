@@ -1,0 +1,14 @@
+@media only screen and (max-width: 768px) {
+    .navigation{
+        display: flex;
+        width: 100%;
+        justify-content:center;
+        // flex-direction: column;
+    }
+    .logo{
+        visibility: hidden;
+    }
+    .lesson-box{
+        width: 80vw;
+    }
+}
