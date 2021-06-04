@@ -53,16 +53,6 @@ displayList(groups, listElement, rows, currentPage);
 setupPagination(groups, paginationElement, rows);
 module.exports = { displayList, setupPagination };
 
-// const inputs = document.getElementsByTagName('input');
-
-// function setInputListeners(inp){
-//     for(let element of inp){
-//         if(element.type==='radio' && element.checked){
-
-//         }
-//     }
-
-// }
 let newGroup = groups;
 let checkboxs = Array.from(document.querySelectorAll('input'));
 for (let item of checkboxs) {
