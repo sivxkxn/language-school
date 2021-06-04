@@ -2,7 +2,7 @@ $light-purple: #ff71fa;
 $so-light-purple: #eedaed;
 $dark: #313030;
 $purple: #b20072;
-$light-grey: #f9f9f9;
+$light-grey: #bfbcbc;
 $hover-grey: #ddd;
 $yellow: #fdb100;
 $red: #e0004b;
@@ -65,10 +65,42 @@ $white: rgb(255, 255, 255);
         box-shadow: 0 0 6px $purple;
     }
 }
-.count{
-color: $red;
-font-weight: bold;
+.count {
+    color: $red;
+    font-weight: bold;
 }
-.lesson-box{
-    margin:2% auto;
+.lesson-box {
+    margin: 2% auto;
+}
+
+.pagenumbers {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+    button {
+        width: 40px;
+        height: 40px;
+        border: none;
+        // appearance: none;
+        outline: none;
+        cursor: pointer;
+        background-color: $white;
+        margin: 5px;
+        transition: 0.4s;
+        color:$dark;
+        font-size: 16px;
+        text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+        &:hover {
+            background-color: $light-grey;
+            color: $white;
+        }
+    }
+    button.active {
+        background-color:$purple;
+        color: $white;
+        box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+    }
+    
 }

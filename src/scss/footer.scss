@@ -1,0 +1,16 @@
+$dark: #313030;
+$purple: #b20072;
+$light-grey: #f9f9f9;
+$hover-grey: #edeaea;
+$white: rgb(255, 255, 255);
+footer{
+    width: 98%;
+    background-color: $dark;
+    margin: 0;
+    padding: 1%;
+    p{
+        margin: 0;
+        font-size: 12px;
+        color: $light-grey;
+    }
+}
