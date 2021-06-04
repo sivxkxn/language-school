@@ -2,13 +2,14 @@
 const { createGroupElement } = require('./group');
 const listElement = document.getElementById('list');
 const paginationElement = document.getElementById('pagination');
+const { mySort, mySearch, myFilter } = require('./funcs');
 let currentPage = 1;
 let rows = 3;
 const groups = require('./lessons.js');
 
 
 function displayList(items, wrapper, rowsPerPage, page) {
-    wrapper.innerHTML = "";
+    wrapper.innerHTML = '';
     page--;
     let start = rowsPerPage * page;
     let end = start + rowsPerPage;
@@ -20,7 +21,7 @@ function displayList(items, wrapper, rowsPerPage, page) {
     }
 }
 function setupPagination(items, wrapper, rowsPerPage) {
-    wrapper.innerHTML = "";
+    wrapper.innerHTML = '';
 
     let page_count = Math.ceil(items.length / rowsPerPage);
     for (let i = 1; i < page_count + 1; i++) {
@@ -48,6 +49,45 @@ function paginationButton(page, items) {
 }
 
 
-displayList(groups, listElement, rows,  currentPage);
+displayList(groups, listElement, rows, currentPage);
 setupPagination(groups, paginationElement, rows);
 module.exports = { displayList, setupPagination };
+
+// const inputs = document.getElementsByTagName('input');
+
+// function setInputListeners(inp){
+//     for(let element of inp){
+//         if(element.type==='radio' && element.checked){
+
+//         }
+//     }
+
+// }
+let newGroup = groups;
+let checkboxs = Array.from(document.querySelectorAll('input'));
+for (let item of checkboxs) {
+    item.addEventListener('change', function () {
+        if (this.checked) {
+            if (this.id === 'dnipro') {
+                newGroup = myFilter(newGroup, 'location', 'Днепр');
+                displayList(newGroup, listElement, rows, currentPage);
+                setupPagination(newGroup, paginationElement, rows);
+            }
+            if (this.id === 'kiev') {
+                newGroup = myFilter(newGroup, 'location', 'Киев');
+                displayList(newGroup, listElement, rows, currentPage);
+                setupPagination(newGroup, paginationElement, rows);
+            }
+            if (this.value === 'asc') {
+                newGroup = mySort(newGroup, 'count', 'asc');
+                displayList(newGroup, listElement, rows, currentPage);
+                setupPagination(newGroup, paginationElement, rows);
+            }
+            if (this.value === 'desc') {
+                newGroup = mySort(newGroup, 'count', 'desc');
+                displayList(newGroup, listElement, rows, currentPage);
+                setupPagination(newGroup, paginationElement, rows);
+            }
+        }
+    });
+}
